@@ -28,11 +28,49 @@
     </style>
 </head>
 
+
+  
+
+
 <body>
   <center><img src="http://projectfresh.com/members/images/BASE-Final-Logo.jpg" border="0" width="1000" height="379"/></center>
 
   <p style="color: #000007;">.</p> 
   <p style="color: #000007;">.</p> 
+
+
+  <% @rows.each do |member| %>
+    <img src="<%= member[8] %>" width="400" height="400" border="0"/><br>
+    <span style="font-size:14px; color: #7b4aac"><strong><%= member[1] %></strong></span>
+    <br> 
+    <em><%= member[2] %></em>
+    <br>
+    <em><%= member[3] %></em>
+    <br><br>
+
+    <span style="font-size:14px; color: #7b4aac"><strong>Briefly what you do and/or brief bio</strong></span><br> 
+    <%= member[4] %>
+    <br><br>
+
+    <span style="font-size:14px; color: #7b4aac"><strong>Briefly describe a project that you're currently working on or envision? </strong></span><br>
+    <%= member[5] %>
+    <br><br> 
+
+    <span style="font-size:14px; color: #7b4aac"><strong>What sort of support would you find helpful at this juncture? </strong></span><br> 
+    <%= member[6] %>
+    <br><br> 
+
+    <span style="font-size:14px; color: #7b4aac"><strong>How would you like to be a part of the "next chapter"?</strong></span><br>  
+    <%= member[7] %>
+    <br><br><br><br><br>
+
+
+  <% end %>
+
+
+
+
+
 
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
